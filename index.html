@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    
-   
-    
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Frixy | See You</title>
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&display=swap" rel="stylesheet">
-  <!-- Swiper CSS -->
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
 
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Tailwind -->
   <script src="https://cdn.tailwindcss.com"></script>
+
   <style>
     body {
       font-family: 'Orbitron', sans-serif;
@@ -24,46 +23,89 @@
 </head>
 
 <body class="bg-black text-white">
-    
-
-
-
 
   <!-- Hero Section -->
   <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 bg-gradient-to-b from-black to-gray-900">
-   <div class="flex items-center space-x-4">
-  <img src="logo.png" alt="Frixy Logo" class="w-16 h-16 rounded-full border-2 border-purple-500 shadow-md">
-  <h1 class="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-600">
-    FRIXY
-  </h1>
-</div>
+    <div class="flex items-center space-x-4">
+      <img src="logo.png" alt="Frixy Logo" class="w-16 h-16 rounded-full border-2 border-purple-500 shadow-md">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-red-600">
+        FRIXY
+      </h1>
+    </div>
 
     <p class="mt-4 text-lg md:text-xl text-gray-300 max-w-xl">
-     Fast, Free Proxies That Always Work.
+      Fast, Free Proxies That Always Work.
     </p>
+
+    <!-- Download Button -->
     <a href="Frixy - Get Free Proxy.apk" class="mt-8 inline-block bg-gradient-to-r from-purple-700 to-pink-600 px-6 py-3 rounded-xl text-white text-xl font-bold hover:scale-105 transition">
       Download the App
     </a>
-    
 
-  
+    <!-- Privacy Policy Button -->
+    <a href="https://bio-frixy.github.io/bio-frixy/privacy-policy" target="_blank" class="mt-4 inline-block bg-gradient-to-r from-gray-700 to-gray-900 px-5 py-2 rounded-lg text-white text-sm font-semibold hover:scale-105 transition">
+      Privacy Policy
+    </a>
 
+    <!-- Screenshots Slider -->
+    <div class="w-full max-w-4xl mt-12">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- Add your screenshots here -->
+          <div class="swiper-slide">
+            <img src="screenshot1.png" alt="Screenshot 1" class="rounded-2xl shadow-lg w-full">
+          </div>
+          <div class="swiper-slide">
+            <img src="screenshot2.png" alt="Screenshot 2" class="rounded-2xl shadow-lg w-full">
+          </div>
+          <div class="swiper-slide">
+            <img src="screenshot3.png" alt="Screenshot 3" class="rounded-2xl shadow-lg w-full">
+          </div>
+          <div class="swiper-slide">
+            <img src="screenshot4.png" alt="Screenshot 4" class="rounded-2xl shadow-lg w-full">
+          </div>
+          <div class="swiper-slide">
+            <img src="screenshot5.png" alt="Screenshot 5" class="rounded-2xl shadow-lg w-full">
+          </div>
+        </div>
 
+        <!-- Navigation arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
 
-
-</div>
-  
+        <!-- Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
   </section>
-
 
   <!-- Footer -->
   <footer class="py-10 bg-black text-center text-gray-600 text-sm">
     © 2025 Frixy. All rights reserved.
   </footer>
 
-
-</script>
-
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      centeredSlides: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 }
+      }
+    });
+  </script>
 
 </body>
 </html>
